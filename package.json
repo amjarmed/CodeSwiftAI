@@ -1,0 +1,47 @@
+{
+  "name": "codeswiftai",
+  "version": "1.0.0",
+  "description": "CodeSwiftAI is an AI-powered VSCode extension that boosts your development speed. It helps developers write, refactor, and debug code faster with intelligent completions, real-time suggestions, and automated code generation. Seamlessly integrated into your workflow, it adapts to your coding style for smarter, more efficient development.",
+  "categories": [
+    "Programming Languages",
+    "AI Tools"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "index.js",
+  "publisher": "amjarmed.com",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiCodeBoost.activate",
+        "title": "Activate AI-CodeBoost"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "aiCodeBoost.activate",
+        "key": "ctrl+shift+a",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "amjarmed.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amjarmed/CodeSwiftAI.git"
+  },
+  "dependencies": {}
+}
