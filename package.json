@@ -15,11 +15,8 @@
     "vscode": "^1.60.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p .",
-    "watch": "tsc -w -p .",
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "watch": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
+    "build": "npx tailwindcss -i ./src/style.css -o ./dist/style.css --minify"
   },
   "contributes": {
     "commands": [
@@ -43,5 +40,7 @@
     "type": "git",
     "url": "https://github.com/amjarmed/CodeSwiftAI.git"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
 }
